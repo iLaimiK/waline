@@ -1,4 +1,4 @@
-// const Application = require('@waline/vercel');
+const Application = require('@waline/vercel');
 
 // module.exports = Application({
 //  async postSave(comment) {
@@ -6,9 +6,7 @@
 //  },
 //});
 
-const Waline = require('@waline/cloudbase');
-
-module.exports = Waline({
+module.exports = Application({
   mailSubjectAdmin: '您的博客「{{site.name}}」收到了新评论',
   mailTemplateAdmin: `
     <div style="border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;">
